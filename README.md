@@ -41,6 +41,7 @@ I suppose this could be set up in localstack, but I've just done it in AWS here.
 - Fission 1.14.1
 - AWS SQS Queues for MQ Trigger
 - AWS Credentials for Producer as well as MQ Trigger
+- Producer function name must be a prefix of consumer function
 
 #### Steps
 - Make sure `specs/env-nodejs.yaml` has AWS crdentials
@@ -53,7 +54,6 @@ I suppose this could be set up in localstack, but I've just done it in AWS here.
 - Examine environment pods and router logs
   
 ### Observations
-- No errors if I rename the producer and consumer functions so that the producer is not a substring/prefix of consumer
 - In fission metrics, I actually see a bunch of 404s for /-consumer path which is what I am expecting. I believe earlier on in my discovery, I was actually seeing 404s. From my most recent tests using this example, I'm seeing:
   ```
   [01/Sep/2021:19:18:03 +0000] "POST /-campaign HTTP/1.1" 200 53 "-" "Go-http-client/1.1"
