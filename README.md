@@ -58,3 +58,5 @@ I suppose this could be set up in localstack, but I've just done it in AWS here.
   ```
   [01/Sep/2021:19:18:03 +0000] "POST /-campaign HTTP/1.1" 200 53 "-" "Go-http-client/1.1"
   ```
+- See the loop.mov video. You can see the issue around 15 second mark. Stuck in a loop.
+  
