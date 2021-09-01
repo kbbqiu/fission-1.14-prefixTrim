@@ -1,0 +1,21 @@
+apiVersion: fission.io/v1
+kind: Environment
+metadata:
+  creationTimestamp: null
+  name: nodejs
+  namespace: default
+spec:
+  builder:
+    command: build
+    image: fission/node-builder-12.16:latest
+  imagepullsecret: ""
+  keeparchive: false
+  poolsize: 3
+  resources: {}
+  runtime:
+    image: fission/node-env-12.16:latest
+    # podspec:
+    #   serviceAccountName: fission-function-irsa
+    #   containers:
+    #     - name: nodejs
+  version: 3

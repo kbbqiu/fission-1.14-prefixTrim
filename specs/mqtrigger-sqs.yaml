@@ -1,0 +1,26 @@
+# apiVersion: fission.io/v1
+# kind: MessageQueueTrigger
+# metadata:
+#   creationTimestamp: null
+#   name: sqstest
+#   namespace: default
+# spec:
+#   contentType: application/json
+#   cooldownPeriod: 300
+#   functionref:
+#     functionweights: null
+#     name: hello-world-consumer
+#     type: name
+#   maxReplicaCount: 100
+#   maxRetries: 0
+#   messageQueueType: aws-sqs-queue
+#   minReplicaCount: 0
+#   mqtkind: keda
+#   pollingInterval: 30
+#   topic: <REPLACE>
+#   respTopic: <REPLACE>
+#   errorTopic: <REPLACE>
+#   metadata:
+#     awsRegion: us-east-1
+#     queueURL: <REPLACE>
+#   secret: fission-sqs
